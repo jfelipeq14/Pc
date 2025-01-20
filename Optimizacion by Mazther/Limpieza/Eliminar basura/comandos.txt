@@ -4,15 +4,17 @@ Limpiar el pc:
 
 2. Copiar y pegar:
 
-ipconfig /flushdns
-
-ipconfig /registerdns
-
 ipconfig /release
-
 ipconfig /renew
-
+ipconfig /flushdns
+netsh int ip reset
+netsh int ipv4 reset
+netsh int ipv6 reset
+netsh int tcp reset
 netsh winsock reset
+netsh advfirewall reset
+netsh branchcache reset
+netsh http flush logbuffer
 
 sfc /scannow
 
