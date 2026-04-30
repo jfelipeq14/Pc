@@ -1,0 +1,21 @@
+Comandos de Docker. dentro de Debian se debe usar `sudo` antes de cada comando para que funcione correctamente:
+
+- Ejecutar (docker-compose): docker compose up
+
+- Ejecutar, pero en segundo plano (no se ve lo que ejecuta): docker compose up -d
+
+- Ejecutar, pero con cambios hechos en el archivo docker-compose (se puede combinar con -d antes del build): docker compose up --build
+
+- Construir imagenes sin cache: docker compose build --no-cache
+
+- Mostrar contenedores: docker compose ps
+
+- Detener servicios: docker compose stop
+
+- Borrar contenedores y redes: docker compose down
+
+- Ver errores: docker compose logs -f
+
+- Interactuar con el contenedor: docker compose exec -it [nombre_contenedor] bash
+
+- Eliminar todo de docker (Reset del proyecto): docker system prune -af --volumes
